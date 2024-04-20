@@ -14,15 +14,12 @@ def scrape_index_fund_data(isin: str):
         cookies_modal_page.page.wait_for_timeout(3000)
 
         funds_info_page = FundsInfoPage(page)
-        funds_info_page.scrap_assets_distribution()
+        data = funds_info_page.scrap_assets_distribution()
         funds_info_page.page.wait_for_timeout(3000)
-        # Aquí realiza las operaciones de scraping que necesites
-        # Por ejemplo, extraer el texto de un elemento:
-        # data = page.query_selector("selector").inner_text()
 
         browser.close()
         
-        # return data
+        return data
 
 def export_to_json(data):
     with open("data.json", "w") as f:

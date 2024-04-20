@@ -11,6 +11,7 @@ class FundsInfoPage:
         self.page = page
 
     def open_tab(self, tab: str):
+        print(f"{FUNDS_SUMMARY[tab]}")
         self.page.click(FUNDS_SUMMARY[tab])
 
     def scrap_generic_info(self):
@@ -21,7 +22,8 @@ class FundsInfoPage:
     def scrap_assets_distribution(self):
         self.open_tab('ASSETS_DISTRIBUTION_TAB')
         assets_tab = AssetsTab(self.page)
-        assets_tab.scrap_data()
+        data = assets_tab.scrap_data()
+        return data
         
     def scrap_profitability(self):
         self.open_tab('PROFITABILITY_TAB')
