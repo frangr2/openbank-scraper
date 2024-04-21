@@ -11,8 +11,15 @@ class FundsInfoPage:
         self.page = page
 
     def open_tab(self, tab: str):
-        print(f"{FUNDS_SUMMARY[tab]}")
+        # print(f"{FUNDS_SUMMARY[tab]}")
         self.page.click(FUNDS_SUMMARY[tab])
+
+    def scrap_data(self, isin: str):
+        data = {
+            "isin": isin,
+            "assets_distribution": self.scrap_assets_distribution()
+        }
+        return data
 
     def scrap_generic_info(self):
         self.open_tab('GENERIC_INFO_TAB')

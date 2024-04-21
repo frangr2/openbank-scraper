@@ -1,0 +1,38 @@
+{
+    "isin": "",
+    "name": "",
+    "updated_at": "",
+    "generic_info": {},
+    "assets_distribution": {
+        "allocation": {
+            "variable": "",
+            "fixed": "",
+            "cash": "",
+            "others": "",
+            "unclassified": ""
+        },
+        "exposure": [
+            {
+                "country": "",
+                "allocation": ""
+            }
+        ],
+        "holdings": [
+            {
+                "name": "",
+                "ticker": "",
+                "country": "",
+                "allocation": "",
+                "sector": ""
+            }
+        ],
+        "capital": {
+            "giant": "",
+            "large": "",
+            "mid": "",
+            "small": ""
+        }
+    },
+    "commissions": {},
+    "profitability": {}
+}

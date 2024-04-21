@@ -14,17 +14,17 @@ def scrape_index_fund_data(isin: str):
         cookies_modal_page.page.wait_for_timeout(3000)
 
         funds_info_page = FundsInfoPage(page)
-        data = funds_info_page.scrap_assets_distribution()
+        data = funds_info_page.scrap_data(isin)
         funds_info_page.page.wait_for_timeout(3000)
 
         browser.close()
         
         return data
 
-def export_to_json(data):
-    with open("data.json", "w") as f:
+def export_to_json(isin: str, data):
+    with open(f"{isin}.json", "w") as f:
         json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     scraped_data = scrape_index_fund_data('LU0996179007')
-    # export_to_json(scraped_data)
+    export_to_json('LU0996179007', scraped_data)

@@ -1,0 +1,72 @@
+{
+    "isin": "LU0996179007",
+    "assets_distribution": {
+        "allocation": {
+            "variable": "100,00%",
+            "fixed": "0,00%",
+            "cash": "0,00%",
+            "others": "0,00%",
+            "unclassified": "0,00%"
+        },
+        "exposure": [
+            {
+                "country": "USA",
+                "allocation": "99,32%"
+            },
+            {
+                "country": "CHE",
+                "allocation": "0,32%"
+            },
+            {
+                "country": "NLD",
+                "allocation": "0,18%"
+            },
+            {
+                "country": "GBR",
+                "allocation": "0,13%"
+            },
+            {
+                "country": "SGP",
+                "allocation": "0,05%"
+            }
+        ],
+        "holdings": [
+            {
+                "name": "Microsoft Corp",
+                "sector": "",
+                "country": "USA",
+                "allocation": "9,86%"
+            },
+            {
+                "name": "Apple Inc",
+                "sector": "",
+                "country": "USA",
+                "allocation": "7,86%"
+            },
+            {
+                "name": "NVIDIA Corp",
+                "sector": "",
+                "country": "USA",
+                "allocation": "6,69%"
+            },
+            {
+                "name": "Amazon.com Inc",
+                "sector": "",
+                "country": "USA",
+                "allocation": "5,34%"
+            },
+            {
+                "name": "Alphabet Inc Class A",
+                "sector": "",
+                "country": "USA",
+                "allocation": "2,95%"
+            }
+        ],
+        "capital": {
+            "giant": "53,53%",
+            "large": "32,13%",
+            "mid": "13,96%",
+            "small": "0,38%"
+        }
+    }
+}
