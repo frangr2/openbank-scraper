@@ -11,7 +11,7 @@
         "exposure": [
             {
                 "country": "USA",
-                "allocation": "99,32%"
+                "allocation": "99,31%"
             },
             {
                 "country": "CHE",
@@ -19,7 +19,7 @@
             },
             {
                 "country": "NLD",
-                "allocation": "0,18%"
+                "allocation": "0,19%"
             },
             {
                 "country": "GBR",
@@ -33,40 +33,45 @@
         "holdings": [
             {
                 "name": "Microsoft Corp",
+                "ticker": "MSFT",
                 "sector": "",
                 "country": "USA",
-                "allocation": "9,86%"
+                "allocation": "9,71%"
             },
             {
                 "name": "Apple Inc",
+                "ticker": "AAPL",
                 "sector": "",
                 "country": "USA",
-                "allocation": "7,86%"
+                "allocation": "7,84%"
             },
             {
                 "name": "NVIDIA Corp",
+                "ticker": "NVDA",
                 "sector": "",
                 "country": "USA",
-                "allocation": "6,69%"
+                "allocation": "6,29%"
             },
             {
                 "name": "Amazon.com Inc",
+                "ticker": "AMZN",
                 "sector": "",
                 "country": "USA",
-                "allocation": "5,34%"
+                "allocation": "5,16%"
             },
             {
                 "name": "Alphabet Inc Class A",
+                "ticker": "GOOG",
                 "sector": "",
                 "country": "USA",
-                "allocation": "2,95%"
+                "allocation": "3,00%"
             }
         ],
         "capital": {
-            "giant": "53,53%",
-            "large": "32,13%",
-            "mid": "13,96%",
-            "small": "0,38%"
+            "giant": "53,09%",
+            "large": "32,32%",
+            "mid": "14,21%",
+            "small": "0,39%"
         }
     }
 }

@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 from locators.funds_summary_locators import ASSETS_DISTRIBUTION_TAB, SCRAP_TABLE
+from utils.dictionaries.ticker import TICKER
 
 class AssetsTab:
 
@@ -28,7 +29,6 @@ class AssetsTab:
             "unclassified": 5}
         
         for key, value in allocation.items():
-            # print(f"{allocation[key]}: {value}")
             allocation[key] = self.page.query_selector(self.allocation_table + SCRAP_TABLE['VALUE'](value, 3)).inner_text()
         
         return allocation
@@ -50,6 +50,7 @@ class AssetsTab:
         for i in range(5):
             item = {}
             item["name"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 1)).inner_text()
+            item["ticker"] = TICKER.get(item["name"])
             item["sector"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 2)).inner_text()
             item["country"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 3)).inner_text()
             item["allocation"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 4)).inner_text()
