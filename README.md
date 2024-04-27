@@ -26,6 +26,12 @@ Este proyecto de Python es un web scraper diseñado para extraer información fi
     venv\Scripts\activate      # En sistemas Windows
     ```
 
+    Para salir del entorno virtual:
+
+    ```bash
+    deactivate
+    ```
+
 4. Instala las dependencias del proyecto desde el archivo `requirements.txt`:
 
     ```bash
@@ -41,21 +47,6 @@ Este proyecto de Python es un web scraper diseñado para extraer información fi
     ```
 
 2. El scraper automatizará la navegación web y extraerá la información financiera de los fondos indexados del sitio web objetivo.
-
-3. Para salir del entorno virtual:
-
-    ```bash
-    deactivate
-    ```
-
-### Black
-
-1. Antes de cada commit, ejecuta el siguiente comando en la raíz del repositorio para mantener el formato del código actualizado
-
-    ```bash
-    python -m black .
-    ```
-
 
 ### Estructura del Proyecto
 
