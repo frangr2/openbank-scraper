@@ -1,3 +1,4 @@
+from datetime import datetime
 from playwright.sync_api import Page
 from locators.funds_summary_locators import FUNDS_SUMMARY
 from poms.funds_summary.tabs.assets_pom import AssetsTab
@@ -16,7 +17,11 @@ class FundsInfoPage:
         self.page.click(FUNDS_SUMMARY[tab])
 
     def scrap_data(self, isin: str):
-        data = {"isin": isin, "assets_distribution": self.scrap_assets_distribution()}
+        data = {
+            "isin": isin,
+            "assets_distribution": self.scrap_assets_distribution(),
+            "updated_at": datetime.now().strftime("%d/%m/%Y"),
+        }
         return data
 
     def scrap_generic_info(self):
