@@ -13,62 +13,77 @@ class AssetsTab:
         self.page = page
 
     def scrap_data(self):
-        data = {}
-        data["allocation"] = self.scrap_allocation()
-        data["exposure"] = self.scrap_exposure()
-        data["holdings"] = self.scrap_holdings()
-        data["capital"] = self.scrap_capital()
+        data = {
+            "allocation": self.scrap_allocation(),
+            "exposure": self.scrap_exposure(),
+            "holdings": self.scrap_holdings(),
+            "capital": self.scrap_capital()
+        }
         return data
+
     
     def scrap_allocation(self):
-        allocation = {
+        allocations = {
             "variable": 1,
             "fixed": 2,
             "cash": 3,
             "others": 4,
-            "unclassified": 5}
+            "unclassified": 5
+            }
         
-        for key, value in allocation.items():
-            allocation[key] = self.page.query_selector(self.allocation_table + SCRAP_TABLE['VALUE'](value, 3)).inner_text()
+        allocation_data = {}
         
-        return allocation
+        for key, value in allocations.items():
+            allocation_data[key] = self.page.query_selector(self.allocation_table + SCRAP_TABLE['VALUE'](value, 3)).inner_text()
+        
+        return allocation_data
 
     def scrap_exposure(self):
-        exposure = []
+        exposure_data = []
         
         for i in range(5):
-            item = {}
-            item["country"] = self.page.query_selector(self.exposure_table + SCRAP_TABLE['VALUE'](i+1, 1)).inner_text()
-            item["allocation"] = self.page.query_selector(self.exposure_table + SCRAP_TABLE['VALUE'](i+1, 2)).inner_text()
-            exposure.append(item)
+            selector_country = self.exposure_table + SCRAP_TABLE['VALUE'](i + 1, 1)
+            selector_allocation = self.exposure_table + SCRAP_TABLE['VALUE'](i + 1, 2)
+            
+            country = self.page.query_selector(selector_country).inner_text()
+            allocation = self.page.query_selector(selector_allocation).inner_text()
+            
+            exposure_data.append({"country": country, "allocation": allocation})
 
-        return exposure
+        return exposure_data
     
     def scrap_holdings(self):
-        holdings = []
+        holdings_data = []
         
         for i in range(5):
-            item = {}
-            item["name"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 1)).inner_text()
-            item["ticker"] = TICKER.get(item["name"])
-            item["sector"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 2)).inner_text()
-            item["country"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 3)).inner_text()
-            item["allocation"] = self.page.query_selector(self.holdings_table + SCRAP_TABLE['VALUE'](i+1, 4)).inner_text()
-            holdings.append(item)
+            selector_name = self.holdings_table + SCRAP_TABLE['VALUE'](i + 1, 1)
+            selector_sector = self.holdings_table + SCRAP_TABLE['VALUE'](i + 1, 2)
+            selector_country = self.holdings_table + SCRAP_TABLE['VALUE'](i + 1, 3)
+            selector_allocation = self.holdings_table + SCRAP_TABLE['VALUE'](i + 1, 4)
+            
+            name = self.page.query_selector(selector_name).inner_text()
+            ticker = TICKER.get(name)
+            sector = self.page.query_selector(selector_sector).inner_text()
+            country = self.page.query_selector(selector_country).inner_text()
+            allocation = self.page.query_selector(selector_allocation).inner_text()
+            
+            holdings_data.append({"name": name, "ticker": ticker, "sector": sector, "country": country, "allocation": allocation})
 
-        return holdings
+        return holdings_data
     
     def scrap_capital(self):
-        capital = {
+        capitals = {
             "giant": 1,
             "large": 2,
             "mid": 3,
             "small": 4
         }
         
-        for key, value in capital.items():
-            # print(f"{capital[key]}: {value}")
-            capital[key] = self.page.query_selector(self.capital_table + SCRAP_TABLE['VALUE'](value, 2)).inner_text()
+        capital_data = {}
         
-        return capital
+        for key, value in capitals.items():
+            selector = self.capital_table + SCRAP_TABLE['VALUE'](value, 2)
+            capital_data[key] = self.page.query_selector(selector).inner_text()
         
+        return capital_data
+
