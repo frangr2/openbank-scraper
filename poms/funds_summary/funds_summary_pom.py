@@ -13,7 +13,6 @@ class FundsInfoPage:
         self.page = page
 
     def open_tab(self, tab: str):
-        # print(f"{FUNDS_SUMMARY[tab]}")
         self.page.click(FUNDS_SUMMARY[tab])
 
     def scrap_data(self, isin: str):
@@ -24,10 +23,10 @@ class FundsInfoPage:
         }
         return data
 
-    def scrap_generic_info(self):
-        self.open_tab("GENERIC_INFO_TAB")
-        generic_info = GenericInfoTab(self.page)
-        generic_info.scrap_data()
+    # def scrap_generic_info(self):
+    #     self.open_tab("GENERIC_INFO_TAB")
+    #     generic_info = GenericInfoTab(self.page)
+    #     generic_info.scrap_data()
 
     def scrap_assets_distribution(self):
         self.open_tab("ASSETS_DISTRIBUTION_TAB")

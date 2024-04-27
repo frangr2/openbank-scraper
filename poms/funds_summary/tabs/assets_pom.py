@@ -42,28 +42,41 @@ class AssetsTab:
 
     def scrap_exposure(self):
         exposure_data = []
+        i = 0
 
-        for i in range(5):
+        while True:
             selector_country = self.exposure_table + SCRAP_TABLE["VALUE"](i + 1, 1)
             selector_allocation = self.exposure_table + SCRAP_TABLE["VALUE"](i + 1, 2)
 
-            country = self.page.query_selector(selector_country).inner_text()
+            country_element = self.page.query_selector(selector_country)
+
+            if not country_element:
+                break
+
+            country = country_element.inner_text()
             allocation = self.page.query_selector(selector_allocation).inner_text()
 
             exposure_data.append({"country": country, "allocation": allocation})
+            i += 1
 
         return exposure_data
 
     def scrap_holdings(self):
         holdings_data = []
+        i = 0
 
-        for i in range(5):
+        while True:
             selector_name = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 1)
             selector_sector = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 2)
             selector_country = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 3)
             selector_allocation = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 4)
 
-            name = self.page.query_selector(selector_name).inner_text()
+            name_element = self.page.query_selector(selector_name)
+
+            if not name_element:
+                break
+
+            name = name_element.inner_text()
             ticker = TICKER.get(name)
             sector = self.page.query_selector(selector_sector).inner_text()
             country = self.page.query_selector(selector_country).inner_text()
@@ -78,6 +91,7 @@ class AssetsTab:
                     "allocation": allocation,
                 }
             )
+            i += 1
 
         return holdings_data
 

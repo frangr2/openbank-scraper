@@ -6,7 +6,7 @@ Este proyecto de Python es un web scraper diseñado para extraer información fi
 
 ### Requisitos del Sistema
 
-- Python 3.x
+- Python 3.12
 - pip (administrador de paquetes de Python)
 - virtualenv (opcional pero recomendado)
 

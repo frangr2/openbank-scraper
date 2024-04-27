@@ -21,9 +21,9 @@
             {
                 "name": "",
                 "ticker": "",
+                "sector": "",
                 "country": "",
-                "allocation": "",
-                "sector": ""
+                "allocation": ""
             }
         ],
         "capital": {
