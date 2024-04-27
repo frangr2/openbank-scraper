@@ -48,6 +48,15 @@ Este proyecto de Python es un web scraper diseñado para extraer información fi
     deactivate
     ```
 
+### Black
+
+1. Antes de cada commit, ejecuta el siguiente comando en la raíz del repositorio para mantener el formato del código actualizado
+
+    ```bash
+    python -m black .
+    ```
+
+
 ### Estructura del Proyecto
 
 - `scraper.py`: El script principal que contiene la lógica del scraper.
