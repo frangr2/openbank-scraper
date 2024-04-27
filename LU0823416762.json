@@ -1,0 +1,91 @@
+{
+    "isin": "LU0823416762",
+    "assets_distribution": {
+        "allocation": {
+            "variable": "98,87%",
+            "fixed": "0,00%",
+            "cash": "1,13%",
+            "others": "0,00%",
+            "unclassified": "0,00%"
+        },
+        "exposure": [
+            {
+                "country": "USA",
+                "allocation": "74,01%"
+            },
+            {
+                "country": "GBR",
+                "allocation": "7,78%"
+            },
+            {
+                "country": "FRA",
+                "allocation": "4,99%"
+            },
+            {
+                "country": "DNK",
+                "allocation": "4,47%"
+            },
+            {
+                "country": "CHE",
+                "allocation": "3,05%"
+            },
+            {
+                "country": "JPN",
+                "allocation": "2,71%"
+            },
+            {
+                "country": "BEL",
+                "allocation": "2,30%"
+            },
+            {
+                "country": "CAN",
+                "allocation": "0,70%"
+            }
+        ],
+        "holdings": [
+            {
+                "name": "Eli Lilly and Co",
+                "ticker": null,
+                "sector": "",
+                "country": "USA",
+                "allocation": "8,16%"
+            },
+            {
+                "name": "UnitedHealth Group Inc",
+                "ticker": null,
+                "sector": "",
+                "country": "USA",
+                "allocation": "7,29%"
+            },
+            {
+                "name": "AstraZeneca PLC",
+                "ticker": null,
+                "sector": "",
+                "country": "GBR",
+                "allocation": "6,04%"
+            },
+            {
+                "name": "Boston Scientific Corp",
+                "ticker": null,
+                "sector": "",
+                "country": "USA",
+                "allocation": "5,10%"
+            },
+            {
+                "name": "Sanofi SA",
+                "ticker": null,
+                "sector": "",
+                "country": "FRA",
+                "allocation": "4,93%"
+            }
+        ],
+        "capital": {
+            "giant": "32,20%",
+            "large": "25,89%",
+            "mid": "21,79%",
+            "small": "12,73%",
+            "null": "7,39%"
+        }
+    },
+    "updated_at": "28/04/2024"
+}

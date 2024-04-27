@@ -1,0 +1,95 @@
+{
+    "isin": "LU0318931192",
+    "assets_distribution": {
+        "allocation": {
+            "variable": "95,27%",
+            "fixed": "0,54%",
+            "cash": "4,26%",
+            "others": "0,00%",
+            "unclassified": "0,00%"
+        },
+        "exposure": [
+            {
+                "country": "CHN",
+                "allocation": "80,76%"
+            },
+            {
+                "country": "HKG",
+                "allocation": "10,21%"
+            },
+            {
+                "country": "NLD",
+                "allocation": "3,13%"
+            },
+            {
+                "country": "GBR",
+                "allocation": "2,61%"
+            },
+            {
+                "country": "TWN",
+                "allocation": "1,09%"
+            },
+            {
+                "country": "USA",
+                "allocation": "0,82%"
+            },
+            {
+                "country": "NOR",
+                "allocation": "0,57%"
+            },
+            {
+                "country": "MAC",
+                "allocation": "0,55%"
+            },
+            {
+                "country": "VNM",
+                "allocation": "0,26%"
+            }
+        ],
+        "holdings": [
+            {
+                "name": "Alibaba Group Holding Ltd Ordinary Shares",
+                "ticker": null,
+                "sector": "",
+                "country": "CHN",
+                "allocation": "7,16%"
+            },
+            {
+                "name": "Tencent Holdings Ltd",
+                "ticker": null,
+                "sector": "",
+                "country": "CHN",
+                "allocation": "5,20%"
+            },
+            {
+                "name": "Industrial And Commercial Bank Of China Ltd Class H",
+                "ticker": null,
+                "sector": "",
+                "country": "CHN",
+                "allocation": "4,22%"
+            },
+            {
+                "name": "China Construction Bank Corp Class H",
+                "ticker": null,
+                "sector": "",
+                "country": "CHN",
+                "allocation": "4,04%"
+            },
+            {
+                "name": "Citigroup Global Markets Holdings Inc.",
+                "ticker": null,
+                "sector": "",
+                "country": "USA",
+                "allocation": "3,62%"
+            }
+        ],
+        "capital": {
+            "giant": "52,28%",
+            "large": "32,38%",
+            "mid": "10,41%",
+            "small": "4,41%",
+            "null": "0,52%"
+        }
+    },
+    "updated_at": "28/04/2024"
+}

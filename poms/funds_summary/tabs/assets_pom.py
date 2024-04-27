@@ -1,6 +1,7 @@
 from playwright.sync_api import Page
 from locators.funds_summary_locators import ASSETS_DISTRIBUTION_TAB, SCRAP_TABLE
 from utils.dictionaries.ticker import TICKER
+from utils.dictionaries.capital import CAPITAL
 
 
 class AssetsTab:
@@ -35,7 +36,7 @@ class AssetsTab:
 
         for key, value in allocations.items():
             allocation_data[key] = self.page.query_selector(
-                self.allocation_table + SCRAP_TABLE["VALUE"](value, 3)
+                self.allocation_table + SCRAP_TABLE["VALUE"](value, 5)
             ).inner_text()
 
         return allocation_data
@@ -63,13 +64,13 @@ class AssetsTab:
 
     def scrap_holdings(self):
         holdings_data = []
-        i = 0
+        i = 1
 
         while True:
-            selector_name = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 1)
-            selector_sector = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 2)
-            selector_country = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 3)
-            selector_allocation = self.holdings_table + SCRAP_TABLE["VALUE"](i + 1, 4)
+            selector_name = self.holdings_table + SCRAP_TABLE["VALUE"](i, 1)
+            selector_sector = self.holdings_table + SCRAP_TABLE["VALUE"](i, 2)
+            selector_country = self.holdings_table + SCRAP_TABLE["VALUE"](i, 3)
+            selector_allocation = self.holdings_table + SCRAP_TABLE["VALUE"](i, 4)
 
             name_element = self.page.query_selector(selector_name)
 
@@ -96,7 +97,19 @@ class AssetsTab:
         return holdings_data
 
     def scrap_capital(self):
-        capitals = {"giant": 1, "large": 2, "mid": 3, "small": 4}
+        capitals = {}
+        i = 1
+
+        while True:
+            selector_capital = self.capital_table + SCRAP_TABLE["VALUE"](i, 1)
+            capital_element = self.page.query_selector(selector_capital)
+
+            if not capital_element:
+                break
+
+            capital = capital_element.inner_text()
+            capitals[CAPITAL.get(capital)] = i
+            i += 1
 
         capital_data = {}
 
