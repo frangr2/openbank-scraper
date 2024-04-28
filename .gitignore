@@ -1,3 +1,10 @@
+# Project
+portfolio/*
+!portfolio/portfolio_example.py
+funds/*
+!funds/isin_collection_example.py
+!funds/isin_collection_schema.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
 from poms.cookies.cookies_modal_pom import CookiesModalPage
 from poms.funds_summary.funds_summary_pom import FundsInfoPage
+from funds.isin_collection import ISIN_COLLECTION
 import json
 
 
@@ -26,22 +27,12 @@ def scrape_index_fund_data(isin: str):
 
 
 def export_to_json(isin: str, data):
-    with open(f"{isin}.json", "w") as f:
+    with open(f"funds/{isin}.json", "w") as f:
         json.dump(data, f, indent=4)
 
 
 if __name__ == "__main__":
-    isin_to_scrap = [
-        "LU0996179007",
-        "LU0474966834",
-        "LU0996177134",
-        "LU0270904781",
-        "LU0823416762",
-        "LU1863263346",
-        "LU0507265923",
-        "LU0318931192",
-    ]
 
-    for isin in isin_to_scrap:
+    for isin in ISIN_COLLECTION:
         scraped_data = scrape_index_fund_data(isin)
         export_to_json(isin, scraped_data)
