@@ -1,10 +1,7 @@
 from datetime import datetime
 from playwright.sync_api import Page
-from locators.funds_summary_locators import FUNDS_SUMMARY
-from poms.funds_summary.tabs.assets_pom import AssetsTab
-from poms.funds_summary.tabs.commissions_pom import CommissionsTab
-from poms.funds_summary.tabs.generic_info_pom import GenericInfoTab
-from poms.funds_summary.tabs.profitability_pom import ProfitabilatyTab
+from locators import FUNDS_SUMMARY
+from .tabs import AssetsTab, CommissionsTab, GenericInfoTab, ProfitabilatyTab
 
 
 class FundsInfoPage:

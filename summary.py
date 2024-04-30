@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-from portfolio.portfolio import PORTFOLIO
-from utils.load_data import load_json_data
+from portfolio import PORTFOLIO
+from utils import import_json
 
 # Calcular el total invertido en la cartera
 if sum(PORTFOLIO.values()) != 100:
@@ -21,7 +21,7 @@ aggregate_allocation = {
 for isin, amount in PORTFOLIO.items():
     if amount != 0:
         # Load data from the corresponding JSON file
-        data = load_json_data(f"funds/{isin}")
+        data = import_json(f"funds/{isin}")
         balanced_amount = amount / 100
 
         # Aggregate exposure

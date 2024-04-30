@@ -1,8 +1,7 @@
 from playwright.sync_api import sync_playwright
-from poms.cookies.cookies_modal_pom import CookiesModalPage
-from poms.funds_summary.funds_summary_pom import FundsInfoPage
+from poms import CookiesModalPage, FundsInfoPage
 from funds.isin_collection import ISIN_COLLECTION
-import json
+from utils import export_to_json
 
 
 def scrape_index_fund_data(isin: str):
@@ -24,11 +23,6 @@ def scrape_index_fund_data(isin: str):
         browser.close()
 
         return data
-
-
-def export_to_json(path: str, data):
-    with open(path, "w") as f:
-        json.dump(data, f, indent=4)
 
 
 if __name__ == "__main__":

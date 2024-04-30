@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from locators.funds_summary_locators import ASSETS_DISTRIBUTION_TAB, SCRAP_TABLE
+from locators import ASSETS_DISTRIBUTION_TAB, SCRAP_TABLE
 from utils.dictionaries import TICKER, CAPITAL
 
 

@@ -1,26 +1,51 @@
 import json
+import subprocess
 from portfolio import PORTFOLIO
 from utils.dictionaries import TICKER
-from utils.load_data import load_json_data
+from utils.import_data import import_json
 
-ticker = TICKER
 
-for isin in PORTFOLIO.keys():
-    # Load data from the corresponding JSON file
-    data = load_json_data(f"funds/{isin}")
-
-    # Aggregate holdings
-    i = 0
-    for holding_data in data["assets_distribution"]["holdings"]:
+def update_ticker_and_write_data(data, isin):
+    """
+    Update ticker information for holdings in the given data and write the updated data to a JSON file.
+    """
+    holdings = data["assets_distribution"]["holdings"]
+    for holding_data in holdings:
         name = holding_data["name"]
+        holding_data["ticker"] = TICKER.get(name, "unknown")
         if name not in TICKER:
-            ticker[name] = "unknown"
-            data["assets_distribution"]["holdings"][i]["ticker"] = "unknown"
-        else:
-            data["assets_distribution"]["holdings"][i]["ticker"] = ticker[name]
-        i += 1
+            TICKER[name] = "unknown"
     with open(f"funds/{isin}.json", "w") as f:
         json.dump(data, f, indent=4)
 
-with open("utils/dictionaries/ticker.py", "w") as f:
-    f.write("TICKER = " + str(ticker))
+
+def update_ticker_file(ticker):
+    """
+    Update the TICKER dictionary in the ticker.py file.
+    """
+    with open("utils/dictionaries/ticker.py", "w") as f:
+        f.write(f"TICKER = {ticker}")
+
+
+def run_black_on_file(file_path):
+    """
+    Run Black formatter on the given file.
+    """
+    try:
+        subprocess.run(["black", file_path], check=True)
+        print("Black se ha ejecutado correctamente.")
+    except subprocess.CalledProcessError as e:
+        print("Ha ocurrido un error al ejecutar Black:", e)
+
+
+def main():
+    for isin, data in PORTFOLIO.items():
+        fund_data = import_json(f"funds/{isin}")
+        update_ticker_and_write_data(fund_data, isin)
+
+    update_ticker_file(TICKER)
+    run_black_on_file("utils/dictionaries/ticker.py")
+
+
+if __name__ == "__main__":
+    main()

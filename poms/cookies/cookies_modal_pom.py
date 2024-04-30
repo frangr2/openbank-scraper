@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from locators.cookies_modal_locators import COOKIES_MODAL
+from locators import COOKIES_MODAL
 
 
 class CookiesModalPage:
