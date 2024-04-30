@@ -45,35 +45,35 @@
         "holdings": [
             {
                 "name": "Eli Lilly and Co",
-                "ticker": "unknown",
+                "ticker": "LLY",
                 "sector": "",
                 "country": "USA",
                 "allocation": "8,19%"
             },
             {
                 "name": "UnitedHealth Group Inc",
-                "ticker": "unknown",
+                "ticker": "UNH",
                 "sector": "",
                 "country": "USA",
                 "allocation": "6,95%"
             },
             {
                 "name": "AstraZeneca PLC",
-                "ticker": "unknown",
+                "ticker": "AZN",
                 "sector": "",
                 "country": "GBR",
                 "allocation": "6,27%"
             },
             {
                 "name": "Sanofi SA",
-                "ticker": "unknown",
+                "ticker": "SAN",
                 "sector": "",
                 "country": "FRA",
                 "allocation": "5,15%"
             },
             {
                 "name": "Boston Scientific Corp",
-                "ticker": "unknown",
+                "ticker": "BSX",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,78%"

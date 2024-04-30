@@ -53,35 +53,35 @@
         "holdings": [
             {
                 "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-                "ticker": "unknown",
+                "ticker": "TSM",
                 "sector": "",
                 "country": "TWN",
                 "allocation": "7,36%"
             },
             {
                 "name": "Samsung Electronics Co Ltd",
-                "ticker": "unknown",
+                "ticker": "005930.KS",
                 "sector": "",
                 "country": "KOR",
                 "allocation": "3,88%"
             },
             {
                 "name": "Tencent Holdings Ltd",
-                "ticker": "unknown",
+                "ticker": "0700.HK",
                 "sector": "",
                 "country": "CHN",
                 "allocation": "3,59%"
             },
             {
                 "name": "Alibaba Group Holding Ltd Ordinary Shares",
-                "ticker": "unknown",
+                "ticker": "BABA",
                 "sector": "",
                 "country": "CHN",
                 "allocation": "2,29%"
             },
             {
                 "name": "Reliance Industries Ltd",
-                "ticker": "unknown",
+                "ticker": "RELIANCE.NS",
                 "sector": "",
                 "country": "IND",
                 "allocation": "1,52%"

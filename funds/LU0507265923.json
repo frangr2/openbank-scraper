@@ -53,35 +53,35 @@
         "holdings": [
             {
                 "name": "Shell PLC",
-                "ticker": "unknown",
+                "ticker": "RDS-A",
                 "sector": "",
                 "country": "GBR",
                 "allocation": "2,90%"
             },
             {
                 "name": "Merck & Co Inc",
-                "ticker": "unknown",
+                "ticker": "MRK",
                 "sector": "",
                 "country": "USA",
                 "allocation": "2,71%"
             },
             {
                 "name": "TotalEnergies SE",
-                "ticker": "unknown",
+                "ticker": "TOT",
                 "sector": "",
                 "country": "FRA",
                 "allocation": "2,66%"
             },
             {
                 "name": "Agnico Eagle Mines Ltd",
-                "ticker": null,
+                "ticker": "unknown",
                 "sector": "",
                 "country": "CAN",
                 "allocation": "2,45%"
             },
             {
                 "name": "Schlumberger Ltd",
-                "ticker": null,
+                "ticker": "unknown",
                 "sector": "",
                 "country": "USA",
                 "allocation": "2,37%"

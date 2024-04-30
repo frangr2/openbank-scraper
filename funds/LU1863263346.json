@@ -74,14 +74,14 @@
             },
             {
                 "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-                "ticker": "unknown",
+                "ticker": "TSM",
                 "sector": "",
                 "country": "TWN",
                 "allocation": "5,71%"
             },
             {
                 "name": "Meta Platforms Inc Class A",
-                "ticker": "unknown",
+                "ticker": "META",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,63%"

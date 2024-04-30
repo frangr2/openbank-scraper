@@ -39,15 +39,15 @@ for isin, amount in PORTFOLIO.items():
 
         # Aggregate holdings
         for holding_data in data["assets_distribution"]["holdings"]:
-            name = holding_data["name"]
+            ticker = holding_data["ticker"]
             allocation = (
                 float(holding_data["allocation"].replace("%", "").replace(",", "."))
                 * balanced_amount
             )
-            if name in aggregate_holdings:
-                aggregate_holdings[name] += allocation
+            if ticker in aggregate_holdings:
+                aggregate_holdings[ticker] += allocation
             else:
-                aggregate_holdings[name] = allocation
+                aggregate_holdings[ticker] = allocation
 
         # Aggregate capital
         # for key, value in data['assets_distribution']['capital'].items():

@@ -33,35 +33,35 @@
         "holdings": [
             {
                 "name": "KLA Corp",
-                "ticker": "unknown",
+                "ticker": "KLAC",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,95%"
             },
             {
                 "name": "CrowdStrike Holdings Inc Class A",
-                "ticker": "unknown",
+                "ticker": "CRWD",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,41%"
             },
             {
                 "name": "Equinix Inc",
-                "ticker": "unknown",
+                "ticker": "EQIX",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,41%"
             },
             {
                 "name": "Fiserv Inc",
-                "ticker": "unknown",
+                "ticker": "FISV",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,32%"
             },
             {
                 "name": "Palo Alto Networks Inc",
-                "ticker": "unknown",
+                "ticker": "PANW",
                 "sector": "",
                 "country": "USA",
                 "allocation": "4,31%"

@@ -1,4 +1,4 @@
-TICKER = TICKER = {
+TICKER = {
     "Alphabet Inc Class A": "GOOG",
     "Amazon.com Inc": "AMZN",
     "NVIDIA Corp": "NVDA",
@@ -33,4 +33,6 @@ TICKER = TICKER = {
     "Industrial And Commercial Bank Of China Ltd Class H": "1398.HK",
     "China Construction Bank Corp Class H": "0939.HK",
     "Citigroup Global Markets Holdings Inc.": "C",
+    "Agnico Eagle Mines Ltd": "unknown",
+    "Schlumberger Ltd": "unknown",
 }

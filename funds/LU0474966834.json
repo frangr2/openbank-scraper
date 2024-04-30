@@ -17,35 +17,35 @@
         "holdings": [
             {
                 "name": "Toyota Motor Corp",
-                "ticker": "unknown",
+                "ticker": "TM",
                 "sector": "",
                 "country": "JPN",
                 "allocation": "6,65%"
             },
             {
                 "name": "Tokyo Electron Ltd",
-                "ticker": "unknown",
+                "ticker": "8035.T",
                 "sector": "",
                 "country": "JPN",
                 "allocation": "3,09%"
             },
             {
                 "name": "Mitsubishi UFJ Financial Group Inc",
-                "ticker": "unknown",
+                "ticker": "MUFG",
                 "sector": "",
                 "country": "JPN",
                 "allocation": "2,86%"
             },
             {
                 "name": "Sony Group Corp",
-                "ticker": "unknown",
+                "ticker": "SONY",
                 "sector": "",
                 "country": "JPN",
                 "allocation": "2,71%"
             },
             {
                 "name": "Keyence Corp",
-                "ticker": "unknown",
+                "ticker": "6861.T",
                 "sector": "",
                 "country": "JPN",
                 "allocation": "2,24%"
