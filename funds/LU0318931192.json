@@ -1,0 +1,37 @@
+{
+    "isin": "LU0318931192",
+    "assets_distribution": {
+        "allocation": {
+            "variable": "95,27%",
+            "fixed": "0,54%",
+            "cash": "4,18%",
+            "others": "0,00%",
+            "unclassified": "0,00%"
+        },
+        "exposure": [
+            {
+                "country": "CHN",
+                "allocation": "80,76%"
+            },
+            {
+                "country": "HKG",
+                "allocation": "10,21%"
+            },
+            {
+                "country": "NLD",
+                "allocation": "3,13%"
+            },
+            {
+                "country": "GBR",
+                "allocation": "2,61%"
+            },
+            {
+                "country": "TWN",
+                "allocation": "1,09%"
+            }
+        ],
+        "holdings": [],
+        "capital": {}
+    },
+    "updated_at": "30/04/2024"
+}

@@ -1,7 +1,6 @@
 from playwright.sync_api import Page
 from locators.funds_summary_locators import ASSETS_DISTRIBUTION_TAB, SCRAP_TABLE
-from utils.dictionaries.ticker import TICKER
-from utils.dictionaries.capital import CAPITAL
+from utils.dictionaries import TICKER, CAPITAL
 
 
 class AssetsTab:

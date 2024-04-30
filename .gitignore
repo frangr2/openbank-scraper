@@ -1,7 +1,8 @@
-# Project
+# Personal project files
 portfolio/*
 !portfolio/portfolio_example.py
 funds/*
+!*.json
 !funds/isin_collection_example.py
 !funds/isin_collection_schema.json
 

@@ -1,0 +1,61 @@
+{
+    "isin": "LU0474966834",
+    "assets_distribution": {
+        "allocation": {
+            "variable": "100,83%",
+            "fixed": "0,00%",
+            "cash": "-0,83%",
+            "others": "0,00%",
+            "unclassified": "0,00%"
+        },
+        "exposure": [
+            {
+                "country": "JPN",
+                "allocation": "100,00%"
+            }
+        ],
+        "holdings": [
+            {
+                "name": "Toyota Motor Corp",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "JPN",
+                "allocation": "6,65%"
+            },
+            {
+                "name": "Tokyo Electron Ltd",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "JPN",
+                "allocation": "3,09%"
+            },
+            {
+                "name": "Mitsubishi UFJ Financial Group Inc",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "JPN",
+                "allocation": "2,86%"
+            },
+            {
+                "name": "Sony Group Corp",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "JPN",
+                "allocation": "2,71%"
+            },
+            {
+                "name": "Keyence Corp",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "JPN",
+                "allocation": "2,24%"
+            }
+        ],
+        "capital": {
+            "giant": "53,58%",
+            "large": "39,27%",
+            "mid": "7,16%"
+        }
+    },
+    "updated_at": "30/04/2024"
+}

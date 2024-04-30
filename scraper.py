@@ -26,8 +26,8 @@ def scrape_index_fund_data(isin: str):
         return data
 
 
-def export_to_json(isin: str, data):
-    with open(f"funds/{isin}.json", "w") as f:
+def export_to_json(path: str, data):
+    with open(path, "w") as f:
         json.dump(data, f, indent=4)
 
 
@@ -35,4 +35,4 @@ if __name__ == "__main__":
 
     for isin in ISIN_COLLECTION:
         scraped_data = scrape_index_fund_data(isin)
-        export_to_json(isin, scraped_data)
+        export_to_json(f"funds/{isin}.json", scraped_data)

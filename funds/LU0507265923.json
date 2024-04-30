@@ -1,0 +1,98 @@
+{
+    "isin": "LU0507265923",
+    "assets_distribution": {
+        "allocation": {
+            "variable": "88,17%",
+            "fixed": "6,04%",
+            "cash": "0,65%",
+            "others": "5,13%",
+            "unclassified": "0,00%"
+        },
+        "exposure": [
+            {
+                "country": "USA",
+                "allocation": "37,48%"
+            },
+            {
+                "country": "DEU",
+                "allocation": "10,30%"
+            },
+            {
+                "country": "FRA",
+                "allocation": "8,93%"
+            },
+            {
+                "country": "CHE",
+                "allocation": "6,96%"
+            },
+            {
+                "country": "CAN",
+                "allocation": "6,95%"
+            },
+            {
+                "country": "GBR",
+                "allocation": "6,44%"
+            },
+            {
+                "country": "JPN",
+                "allocation": "5,21%"
+            },
+            {
+                "country": "NOR",
+                "allocation": "3,69%"
+            },
+            {
+                "country": "NLD",
+                "allocation": "2,96%"
+            },
+            {
+                "country": "TWN",
+                "allocation": "2,58%"
+            }
+        ],
+        "holdings": [
+            {
+                "name": "Shell PLC",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "GBR",
+                "allocation": "2,90%"
+            },
+            {
+                "name": "Merck & Co Inc",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "USA",
+                "allocation": "2,71%"
+            },
+            {
+                "name": "TotalEnergies SE",
+                "ticker": "unknown",
+                "sector": "",
+                "country": "FRA",
+                "allocation": "2,66%"
+            },
+            {
+                "name": "Agnico Eagle Mines Ltd",
+                "ticker": null,
+                "sector": "",
+                "country": "CAN",
+                "allocation": "2,45%"
+            },
+            {
+                "name": "Schlumberger Ltd",
+                "ticker": null,
+                "sector": "",
+                "country": "USA",
+                "allocation": "2,37%"
+            }
+        ],
+        "capital": {
+            "giant": "52,33%",
+            "large": "39,63%",
+            "mid": "7,47%",
+            "small": "0,58%"
+        }
+    },
+    "updated_at": "30/04/2024"
+}
