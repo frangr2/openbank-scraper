@@ -2,7 +2,7 @@ import json
 import subprocess
 from portfolio import PORTFOLIO
 from utils.dictionaries import TICKER
-from utils.import_data import import_json
+from utils.import_data import import_from_json
 
 
 def update_ticker_and_write_data(data, isin):
@@ -38,14 +38,10 @@ def run_black_on_file(file_path):
         print("Ha ocurrido un error al ejecutar Black:", e)
 
 
-def main():
+if __name__ == "__main__":
     for isin, data in PORTFOLIO.items():
-        fund_data = import_json(f"funds/{isin}")
+        fund_data = import_from_json(f"funds/{isin}")
         update_ticker_and_write_data(fund_data, isin)
 
     update_ticker_file(TICKER)
     run_black_on_file("utils/dictionaries/ticker.py")
-
-
-if __name__ == "__main__":
-    main()

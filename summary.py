@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 from portfolio import PORTFOLIO
-from utils import import_json
+from utils import import_from_json
 
 # Calcular el total invertido en la cartera
 if sum(PORTFOLIO.values()) != 100:
-    raise Exception("Portfolio is not balanced correctly")
+    raise Exception("Portfolio is not correctly balanced")
 
 
 aggregate_exposure = {}
@@ -21,7 +21,7 @@ aggregate_allocation = {
 for isin, amount in PORTFOLIO.items():
     if amount != 0:
         # Load data from the corresponding JSON file
-        data = import_json(f"funds/{isin}")
+        data = import_from_json(f"funds/{isin}")
         balanced_amount = amount / 100
 
         # Aggregate exposure
@@ -50,23 +50,16 @@ for isin, amount in PORTFOLIO.items():
                 aggregate_holdings[ticker] = allocation
 
         # Aggregate capital
-        # for key, value in data['assets_distribution']['capital'].items():
-        #     aggregate_capital[key] += float(value.replace("%", "").replace(",", ".")) * balanced_amount
+        for key, value in data["assets_distribution"]["capital"].items():
+            aggregate_capital[key] += (
+                float(value.replace("%", "").replace(",", ".")) * balanced_amount
+            )
 
         # Aggregate allocation
         for key, value in data["assets_distribution"]["allocation"].items():
             aggregate_allocation[key] += (
                 float(value.replace("%", "").replace(",", ".")) * balanced_amount
             )
-
-# print(f"{sum(aggregate_exposure.values())}")
-# print(f"{sum(aggregate_holdings.values())}")
-# print(f"{sum(aggregate_capital.values())}")
-# print(f"{sum(aggregate_allocation.values())}")
-# print(f"{aggregate_exposure}")
-print(f"{aggregate_holdings}")
-# print(f"{aggregate_capital}")
-# print(f"{aggregate_allocation}")
 
 # Plot aggregate exposure
 plt.figure(figsize=(10, 6))
@@ -94,10 +87,10 @@ plt.xticks(rotation=45, ha="right")
 plt.savefig("portfolio/graphics/aggregate_holdings.png")
 
 # Plot aggregate capital
-# plt.figure(figsize=(8, 6))
-# plt.pie(aggregate_capital.values(), labels=aggregate_capital.keys(), autopct='%1.1f%%')
-# plt.title('Aggregate Portfolio Capital')
-# plt.savefig('portfolio/graphics/aggregate_capital.png')
+plt.figure(figsize=(8, 6))
+plt.pie(aggregate_capital.values(), labels=aggregate_capital.keys(), autopct="%1.1f%%")
+plt.title("Aggregate Portfolio Capital")
+plt.savefig("portfolio/graphics/aggregate_capital.png")
 
 # Plot the aggregate allocation
 plt.figure(figsize=(8, 6))

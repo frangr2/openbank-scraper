@@ -31,12 +31,12 @@ class FundsInfoPage:
         data = assets_tab.scrap_data()
         return data
 
-    def scrap_profitability(self):
-        self.open_tab("PROFITABILITY_TAB")
-        profitability_tab = ProfitabilatyTab(self.page)
-        profitability_tab.scrap_data()
+    # def scrap_profitability(self):
+    #     self.open_tab("PROFITABILITY_TAB")
+    #     profitability_tab = ProfitabilatyTab(self.page)
+    #     profitability_tab.scrap_data()
 
-    def scrap_commissions(self):
-        self.open_tab("COMMISSIONS_TAB")
-        commissions_tab = CommissionsTab(self.page)
-        commissions_tab.scrap_data()
+    # def scrap_commissions(self):
+    #     self.open_tab("COMMISSIONS_TAB")
+    #     commissions_tab = CommissionsTab(self.page)
+    #     commissions_tab.scrap_data()

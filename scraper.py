@@ -4,13 +4,11 @@ from funds.isin_collection import ISIN_COLLECTION
 from utils import export_to_json
 
 
-def scrape_index_fund_data(isin: str):
+def scrape_fund_data(isin: str):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
-        page.goto(
-            f"https://www.openbank.es/fund/{isin}"
-        )  # Cambia la URL por la página que quieras scrapear
+        page.goto(f"https://www.openbank.es/fund/{isin}")
 
         cookies_modal_page = CookiesModalPage(page)
         cookies_modal_page.reject_cookies()
@@ -26,7 +24,6 @@ def scrape_index_fund_data(isin: str):
 
 
 if __name__ == "__main__":
-
     for isin in ISIN_COLLECTION:
-        scraped_data = scrape_index_fund_data(isin)
+        scraped_data = scrape_fund_data(isin)
         export_to_json(f"funds/{isin}.json", scraped_data)
