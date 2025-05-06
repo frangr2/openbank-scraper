@@ -6,6 +6,21 @@ funds/*
 !funds/isin_collection_example.py
 !funds/isin_collection_schema.json
 
+# Credentials and sensitive information
+*credentials*
+*secret*
+*password*
+*api_key*
+*.pem
+*.key
+*.crt
+
+# Logs and temporary files
+*.log.*
+temp/
+logs/
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

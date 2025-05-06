@@ -1,8 +1,22 @@
 # openbank-scraper
 
-## Scraper de Fondos Indexados en el Sitio Web de Openbank
+## ⚠️ Aviso Importante
 
-Este proyecto de Python es un web scraper diseñado para extraer información financiera de fondos indexados de un sitio web específico. Utiliza Playwright para automatizar la navegación web y sigue el modelo de Page Object para organizar el código de manera eficiente.
+Este proyecto es **exclusivamente educativo** y tiene como único propósito practicar y mejorar mis habilidades de programación en Python. La elección de la web de OpenBank como objetivo del scraper se debe únicamente a un interés personal en el ámbito financiero, sin ningún otro criterio específico.
+
+Este scraper no está destinado para uso en producción ni tiene afiliación alguna con OpenBank. Se recomienda no utilizar este código para propósitos comerciales o de producción.
+
+## Descripción del Proyecto
+
+Este proyecto es un ejercicio de práctica que implementa un web scraper en Python para extraer información de fondos indexados. Utiliza Playwright para automatizar la navegación web y sigue el patrón de diseño Page Object Model (POM) como ejercicio de buenas prácticas de programación.
+
+### Objetivos de Aprendizaje
+
+- Practicar programación en Python
+- Implementar patrones de diseño (Page Object Model)
+- Trabajar con bibliotecas de automatización web (Playwright)
+- Manejar datos y exportación a JSON
+- Aplicar principios de código limpio y modular
 
 ### Requisitos del Sistema
 
@@ -40,13 +54,15 @@ Este proyecto de Python es un web scraper diseñado para extraer información fi
 
 ### Uso
 
-1. Ejecuta el script principal para iniciar el scraper:
+**Nota**: Este código es solo para fines educativos y de práctica. No se recomienda su uso en entornos de producción.
+
+1. Ejecuta el script principal:
 
     ```bash
     python scraper.py
     ```
 
-2. El scraper automatizará la navegación web y extraerá la información financiera de los fondos indexados del sitio web objetivo.
+2. El scraper automatizará la navegación web como ejercicio de práctica.
 
 ### Estructura del Proyecto
 
@@ -71,3 +87,7 @@ Si tienes preguntas, problemas o sugerencias, por favor abre un issue en este re
 ### Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE).
+
+### Descargo de Responsabilidad
+
+Este proyecto es un ejercicio personal de programación y no está asociado, respaldado ni afiliado de ninguna manera con OpenBank o cualquier otra institución financiera. El autor no se hace responsable del uso que se pueda dar a este código.
