@@ -70,20 +70,6 @@ Este proyecto es un ejercicio de práctica que implementa un web scraper en Pyth
 - `poms/`: Directorio que contiene los Page Objects utilizados para interactuar con las páginas web.
 - `utils/`: Directorio que contiene utilidades auxiliares para el proyecto.
 
-### Contribuyendo
-
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una rama con tu nueva funcionalidad: `git checkout -b feature/nueva-funcionalidad`.
-3. Realiza tus cambios y haz commits describiendo tus modificaciones siguiendo [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): `git commit -m '<type>[optional scope]: <description>'`.
-4. Sube tus cambios a tu repositorio: `git push origin feature/nueva-funcionalidad`.
-5. Envía un pull request para que revisemos tus cambios.
-
-### Soporte
-
-Si tienes preguntas, problemas o sugerencias, por favor abre un issue en este repositorio.
-
 ### Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE).
